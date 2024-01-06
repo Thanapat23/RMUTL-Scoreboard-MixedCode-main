@@ -312,6 +312,7 @@ class _ButtonSetTimeState extends State<ButtonSetTime> {
                           TextButton(
                               onPressed: () {
                                 Navigator.pop(context);
+                                context.read<TimerBasketball>().syncBoard();
                                 Map<String, String> alldatas = {
                                   'Time': context
                                       .read<TimerBasketball>()
@@ -354,6 +355,7 @@ class _ButtonSetTimeState extends State<ButtonSetTime> {
                           TextButton(
                               onPressed: () {
                                 Navigator.pop(context);
+                                context.read<TimerSoccer>().syncBoard();
                                 Map<String, String> alldatas = {
                                   'Time': context
                                       .read<TimerSoccer>()
@@ -396,6 +398,7 @@ class _ButtonSetTimeState extends State<ButtonSetTime> {
                           TextButton(
                               onPressed: () {
                                 Navigator.pop(context);
+                                context.read<TimerFutsal>().syncBoard();
                                 Map<String, String> alldatas = {
                                   'Time': context
                                       .read<TimerFutsal>()

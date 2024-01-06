@@ -85,6 +85,6 @@ class Timer with ChangeNotifier {
   }
 
   void syncBoard() {
-    _connectBoard.TestTimer(timeLeftString);
+    _connectBoard.updateTimer(timeLeftString);
   }
 }

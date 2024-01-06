@@ -36,6 +36,6 @@ class Set with ChangeNotifier {
   }
 
   void syncBoard() {
-    _connectBoard.TestSet(_set[0].toString(), _set[1].toString());
+    _connectBoard.updateSet(_set[0].toString(), _set[1].toString());
   }
 }

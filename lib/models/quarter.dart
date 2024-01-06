@@ -29,6 +29,6 @@ class Quarter with ChangeNotifier {
   }
 
   void syncBoard() {
-    _connectBoard.TestQuarter(_quarter.toString());
+    _connectBoard.updateQuarter(_quarter.toString());
   }
 }

@@ -37,6 +37,6 @@ class Foul with ChangeNotifier {
   }
 
   void syncBoard() {
-    _connectBoard.TestFoul(_foul[0].toString(), _foul[1].toString());
+    _connectBoard.updateFoul(_foul[0].toString(), _foul[1].toString());
   }
 }

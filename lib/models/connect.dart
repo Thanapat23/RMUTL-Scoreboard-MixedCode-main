@@ -18,24 +18,24 @@ class ConnectBoard with ChangeNotifier {
     notifyListeners();
   }
 
-  void TestScore(String a, String b) {
-    print("TEST Update Score");
+  void updateScore(String a, String b) {
+    print("Update Score $a and $b");
   }
 
-  void TestQuarter(String a) {
-    print("TEST Update Quarter");
+  void updateQuarter(String a) {
+    print("Update Quarter $a");
   }
 
-  void TestFoul(String a, String b) {
-    print("TEST Update Foul");
+  void updateFoul(String a, String b) {
+    print("Update Foul $a and $b");
   }
 
-  void TestSet(String a, String b) {
-    print("TEST Update Set");
+  void updateSet(String a, String b) {
+    print("Update Set $a and $b");
   }
 
-  void TestTimer(String a) {
-    print("TEST Update Timer");
+  void updateTimer(String a) {
+    print("Update Timer $a");
   }
   // sendScore(String scoreA, String scoreB) async {
   //   print("Show IP and Port");

@@ -41,6 +41,6 @@ class Score with ChangeNotifier {
   }
 
   void syncBoard() {
-    _connectBoard.TestScore(_score[0].toString(), _score[1].toString());
+    _connectBoard.updateScore(_score[0].toString(), _score[1].toString());
   }
 }
