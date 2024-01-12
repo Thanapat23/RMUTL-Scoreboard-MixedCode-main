@@ -126,7 +126,7 @@ class _WidgetTimerState extends State<WidgetTimer> {
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
-                      context.read<TimerSoccer>().toggleTimer();
+                      context.read<TimerSoccer>().toggleTimerUp();
                       status = context.read<TimerSoccer>().isRunning;
                       Map<String, String> alldatas = {
                         'Time': context

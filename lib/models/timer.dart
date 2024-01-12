@@ -35,6 +35,17 @@ class Timer with ChangeNotifier {
     notifyListeners();
   }
 
+  void toggleTimerUp() {
+    if (!isRunning) {
+      startTimeUp(_duration.inSeconds);
+    } else {
+      _tickSubscription?.pause();
+    }
+
+    isRunning = !isRunning;
+    notifyListeners();
+  }
+
   void pauseTimer() {
     _tickSubscription?.pause();
     isRunning = !isRunning;
@@ -50,6 +61,23 @@ class Timer with ChangeNotifier {
       _duration = Duration(seconds: timeLeftInSeconds);
 
       if (_duration.inSeconds == 0) {
+        isRunning = false;
+        _tickSubscription?.cancel();
+      }
+
+      notifyListeners();
+    });
+  }
+
+  void startTimeUp(int seconds) {
+    _tickSubscription?.cancel();
+    _tickSubscription = Stream<int>.periodic(
+      const Duration(seconds: 1),
+      (sec) => sec + 1,
+    ).take(seconds).listen((imeLeftInSeconds) {
+      _duration = Duration(seconds: imeLeftInSeconds);
+
+      if (_duration.inSeconds == seconds) {
         isRunning = false;
         _tickSubscription?.cancel();
       }
